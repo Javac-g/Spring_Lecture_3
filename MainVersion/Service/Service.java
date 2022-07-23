@@ -2,7 +2,7 @@ package com.company.MainVersion.Service;
 
 import com.company.MainVersion.Controller.Car;
 import com.company.MainVersion.Controller.RequestDTO;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -58,7 +58,7 @@ public class Service {
         user.setId(json.getId());
         user.setTool(json.getTool());
         setEnum(user,json);
-        serviceLog("\nCreated:",user);
+        serviceLog(" - Created:",user);
         datalist.add(user);
         return user;
     }
@@ -66,7 +66,7 @@ public class Service {
     public ResponseDTO read(Integer id){
         for (ResponseDTO user:datalist){
             if (user.getId().equals(id)){
-                serviceLog("\nSearched:",user);
+                serviceLog(" - Searched:",user);
                 return user;
             }
         }
@@ -80,7 +80,7 @@ public class Service {
             user.setId(json.getId());
             user.setTool(json.getTool());
             setEnum(user,json);
-            serviceLog("\nUpdated:",user);
+            serviceLog(" - Updated:",user);
             return user;
         }
 
@@ -92,7 +92,7 @@ public class Service {
         for (int i = 0; i < datalist.size(); i++){
             if (datalist.get(i).getId().equals(id)){
                 x = i;
-                serviceLog("\nDelete A:",datalist.get(x));
+                serviceLog(" - Delete A:",datalist.get(x));
             }
         }
         if (x != -1){
@@ -107,6 +107,7 @@ public class Service {
         for (ResponseDTO user:datalist){
             if (user.getId().equals(id)){
                x = datalist.indexOf(user);
+               serviceLog(" - Delete B:",user);
                datalist.remove(x);
                return x;
             }
