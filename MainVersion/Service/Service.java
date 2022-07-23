@@ -102,4 +102,16 @@ public class Service {
         return null;
     }
 
+    public Integer Delete_B(Integer id){
+        int x = -1;
+        for (ResponseDTO user:datalist){
+            if (user.getId().equals(id)){
+               x = datalist.indexOf(user);
+               datalist.remove(x);
+               return x;
+            }
+        }
+        return null;
+    }
+
 }//End.
