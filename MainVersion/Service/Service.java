@@ -58,12 +58,20 @@ public class Service {
         user.setId(json.getId());
         user.setTool(json.getTool());
         setEnum(user,json);
-        serviceLog("Created:",user);
+        serviceLog("\nCreated:",user);
         datalist.add(user);
         return user;
     }
 
-
+    public ResponseDTO read(Integer id){
+        for (ResponseDTO user:datalist){
+            if (user.getId().equals(id)){
+                serviceLog("\nSearched:",user);
+                return user;
+            }
+        }
+        return null;
+    }
 
 
 }//End.
