@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/Second")
 public class ControllerTwo {
-    private Service_Two_A service_two_a;
-    private Service_Two_B service_two_b;
+
     private final static Logger logger = LoggerFactory.getLogger(ControllerTwo.class);
 
 

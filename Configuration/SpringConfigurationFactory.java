@@ -4,6 +4,7 @@ import com.company.MainVersion.Controller.Controller;
 import com.company.MainVersion.Service.Service;
 import com.company.Vers1.Controller.ControllerOne;
 import com.company.Vers1.Services.Service_One_A;
+import com.company.Vers3.Services.Service_Three_A;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -21,6 +22,11 @@ public class SpringConfigurationFactory {
     @Scope(value = "prototype")
     public Service_One_A service_one_a(){
         return new Service_One_A();
+    }
+    @Bean
+    @Scope(value = "prototype")
+    public Service_Three_A service_three_a(){
+        return new Service_Three_A();
     }
     /////////////////////////////////////////  C-O-N-T-R-O-L-L-E-R-S   ///////////////////////////////////////////////
     @Bean(name = "Controller")  // Main Controller . Lazy to create new project.
