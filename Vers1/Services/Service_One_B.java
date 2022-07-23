@@ -2,9 +2,11 @@ package com.company.Vers1.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 @Service
+@Scope(value = "prototype")
 public class Service_One_B {
     private String one;
     private Integer two;

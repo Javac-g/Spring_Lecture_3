@@ -28,6 +28,8 @@ public class ControllerOne {
     @GetMapping(value = "/S",produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String service(){
+        logger.info("A: " + service_one_a);
+        logger.info("B: " + service_one_b);
         return "\n" +  service_one_a.getOne() + "\n" + service_one_a.getTwo() + "\n" + service_one_b.getOne() + "\n" + service_one_b.getTwo();
     }
 }

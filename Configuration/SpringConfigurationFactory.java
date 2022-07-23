@@ -29,6 +29,7 @@ public class SpringConfigurationFactory {
         return new Controller(serviceBean());
     }
     @Bean(name = "ControllerOne")
+    @Scope(value = "prototype")
     public ControllerOne controllerOneBean(){
         ControllerOne controllerOne = new ControllerOne();
         controllerOne.setService_one_a(service_one_a());
