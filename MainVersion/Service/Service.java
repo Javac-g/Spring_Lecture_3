@@ -1,5 +1,7 @@
 package com.company.MainVersion.Service;
 
+import com.company.MainVersion.Controller.Car;
+import com.company.MainVersion.Controller.RequestDTO;
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 
 import java.io.ByteArrayOutputStream;
@@ -33,5 +35,20 @@ public class Service {
         }
 
 
+    }
+    public void setEnum(ResponseDTO user, RequestDTO json){
+        for (Car car: json.getCarlist()){
+            switch (car.getValue()){
+                case "F":
+                    user.setCarenum(CarEnum.Ford);
+                    break;
+                case "A":
+                    user.setCarenum(CarEnum.Audi);
+                    break;
+                default:
+                    user.setCarenum(CarEnum.Walk);
+                    break;
+            }
+        }
     }
 }
