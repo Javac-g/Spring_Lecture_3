@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 @Scope(value = "prototype")
 public class Service_Two_A {
-    @Value("${prop.L2}")
-    private Integer two;
+    @Value("${prop.C}")
+    private String two;
 
-    public Integer getTwo() {
+    public String getTwo() {
         return two;
     }
 

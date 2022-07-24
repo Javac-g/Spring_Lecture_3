@@ -24,6 +24,9 @@ public class ControllerThree {
     @GetMapping(value = "/S",produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String service(){
+        logger.info("https://192.168.0.104:8080/Third/S");
+        logger.info("A: " + getService_three_a());
+        logger.info("B: " + getService_three_b());
         return "\n" + getService_three_a().getOne() +"\n" + getService_three_b().getTwo();
     }
 }

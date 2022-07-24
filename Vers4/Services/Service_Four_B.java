@@ -1,9 +1,9 @@
-package com.company.Vers3.Services;
+package com.company.Vers4.Services;
 
 import org.springframework.beans.factory.annotation.Value;
 
-public class Service_Three_A {
-    @Value("${prop.E}")
+public class Service_Four_B {
+    @Value("${prop.H}")
     private String one;
 
     public String getOne() {

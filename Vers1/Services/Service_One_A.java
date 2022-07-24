@@ -3,10 +3,10 @@ package com.company.Vers1.Services;
 import org.springframework.beans.factory.annotation.Value;
 
 public class Service_One_A {
-    @Value("${prop.KeyOne}")
+    @Value("${prop.A}")
     private String one;
-    @Value("${prop.KeyThree}")
-    private Integer two;
+    @Value("${prop.B}")
+    private String two;
 
     public String getOne() {
         return one;
@@ -16,11 +16,11 @@ public class Service_One_A {
         this.one = one;
     }
 
-    public Integer getTwo() {
+    public String getTwo() {
         return two;
     }
 
-    public void setTwo(Integer two) {
+    public void setTwo(String two) {
         this.two = two;
     }
 }

@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 @Scope(value = "prototype")
 public class Service_One_B {
     private String one;
-    private Integer two;
+    private String two;
 
     @Autowired
-    public Service_One_B(@Value("${prop.KeyTwo}") String one, @Value("${prop.KeyFour}") Integer two) {
+    public Service_One_B(@Value("${prop.KeyTwo}") String one, @Value("${prop.KeyFour}") String two) {
         this.one = one;
         this.two = two;
     }
@@ -21,15 +21,11 @@ public class Service_One_B {
         return one;
     }
 
-    public void setOne(String one) {
-        this.one = one;
-    }
 
-    public Integer getTwo() {
+
+    public String getTwo() {
         return two;
     }
 
-    public void setTwo(Integer two) {
-        this.two = two;
-    }
+
 }
